@@ -16,6 +16,7 @@ def andAgain():
             results = x * int(y)
             print ("times", y, "is: ", results)
             y = input("Enter another value: ")
+            # bit of a RE here for numbers
             test = (bool(re.match('^[0-9]+$', y)))
             if(not test) :
                 ask = input ("Want to go again: Y(es) or N(o)?")
