@@ -4,7 +4,7 @@ print ("The results of a random number times the integer value you input.")
 ask = ""
 # First exercise working with Python
 def andAgain():
-    y = input("Enter a value: ")
+    y = input("Enter an Integer value: ")
     test = (bool(re.match('^[0-9]+$', y)))
     if(not test) :
         ask = input ("Want to go again: Y(es) or N(o)?")
@@ -15,7 +15,7 @@ def andAgain():
             print ("randomly picked: ",  x)
             results = x * int(y)
             print ("times", y, "is: ", results)
-            y = input("Enter a value: ")
+            y = input("Enter another value: ")
             test = (bool(re.match('^[0-9]+$', y)))
             if(not test) :
                 ask = input ("Want to go again: Y(es) or N(o)?")
