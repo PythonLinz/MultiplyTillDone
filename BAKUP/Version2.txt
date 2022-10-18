@@ -1,0 +1,31 @@
+import random
+import re
+print ("The results of a random number times the integer value you input.")
+ask = ""
+y, x = 0, 0
+test, doRun = True, True
+
+def andAgain(y):    
+    while test :
+            x = int(random.randint(1, 10))
+            print ("randomly picked: ",  int(x), "x", int(y), "= ", int(x) * int(y))
+            promptTwice()
+def bigAsk(ask):
+            ask = input("Would you like to try again? (y/n): ")
+            if (ask == "Y" or ask == "Yes" or ask == "y") :
+                promptTwice()
+                andAgain(y)
+            else :
+                print("You decided to exit")
+                exit()
+def promptTwice():
+            y = input("Enter Integer value: ")
+            test = (bool(re.match('^[0-9]+$', y)))
+            if(not test) :
+                bigAsk(ask)
+            else :
+                andAgain(y)                             
+if (doRun) :                
+    promptTwice()
+doRun = False
+andAgain()         
